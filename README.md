@@ -117,5 +117,5 @@ const JWT_SECRET = 'shipping_order';
 
 - **ฐานข้อมูล**: ฐานข้อมูล PostgreSQL ต้องมีตาราง `customers`, `products`, `cart`, `product_tags`, `product_images`, และ `reviews` ตามโครงสร้างที่ใช้ในโค้ด
 รันบน EC2 ด้วย
-
+sudo docker run --name my-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=shipping_order -p 5432:5432 -d postgres:latest
 - **API ภายนอก**: ระบบนี้สามารถดึงข้อมูลสินค้าจาก `https://dummyjson.com/products` และบันทึกในฐานข้อมูล
