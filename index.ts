@@ -23,9 +23,7 @@ await client.connect()
 const app = new Elysia().use(cors());
 const JWT_SECRET = 'shipping_order';
 
-app.get('/', () => {
-    return { message: 'API is running' };
-});
+
 
 // Route for creating a new account with duplicate username checking
 app.post('/register', async ({ body }) => {
@@ -378,5 +376,5 @@ async function fetchAndStoreProducts() {
 // fetchAndStoreProducts();
 // Start the server
 app.listen(4000, () => {
-    console.log('Server is running on http://3.0.50.174:4000');
+    console.log('Server is running on http://localhost:4000');
 });
